@@ -174,7 +174,9 @@ object Form_dbtest: TForm_dbtest
     TextSettings.Font.Size = 16.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
     TextSettings.FontColor = claCrimson
-    Text = 'access MSSQL or MySQL  database  from  Windows or from LINUX'
+    Text = 
+      'access MSSQL or MySQL  database  via LIVE BINDINGS from  Windows' +
+      ' or from LINUX'
     TabOrder = 51
   end
   object btn1: TButton
