@@ -29,7 +29,6 @@ type
     btn_ConnectDatabase: TButton;
     con1: TFDConnection;
     btn_getOBJTable: TButton;
-    FDQuery1: TFDQuery;
     lst_servernames: TListBox;
     lst_Databases: TListBox;
     lbl3: TLabel;
@@ -151,7 +150,11 @@ var
   BindSourceDB1: TBindSourceDB ;
   BindingsList1: TBindingsList ;
   lnkgrdtdtsrcBindSourceDB: TLinkGridToDataSource;
+  FDQuery1 : TFDQuery;
 begin
+
+    FDQuery1 :=TFDQuery.Create(self);
+    FDQuery1.Connection := con1;
 
     BindSourceDB1:=TBindSourceDB.Create(self);
     BindSourceDB1.DataSet := FDQuery1 ;
@@ -163,6 +166,9 @@ begin
     lnkgrdtdtsrcBindSourceDB.Category := 'Quick Bindings';
     lnkgrdtdtsrcBindSourceDB.DataSource := BindSourceDB1 ;
     lnkgrdtdtsrcBindSourceDB.GridControl := strngrd1;
+
+
+    bndnvgtr1.DataSource := BindSourceDB1;
 
   try
 
