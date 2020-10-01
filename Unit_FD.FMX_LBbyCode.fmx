@@ -215,10 +215,8 @@ object Form_dbtest: TForm_dbtest
   end
   object con1: TFDConnection
     Params.Strings = (
-      'Database=DSS_AI4DI_test_temp'
       'Server=mucsad26'
-      'OSAuthent=Yes'
-      'DriverID=MSSQL')
+      'OSAuthent=Yes')
     LoginPrompt = False
     Left = 64
     Top = 264
